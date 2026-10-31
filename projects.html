@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Projects - Aashish Ranjan</title>
+  <meta content="Academic and Research Projects by Aashish Ranjan" name="description">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Swiper Carousel CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Dedicated Projects CSS File -->
+  <link href="assets/css/projects.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="projects-header py-3 px-4 d-flex justify-content-between align-items-center">
+    <a href="index.html" class="btn btn-sm btn-outline-dark back-nav-btn d-inline-flex align-items-center gap-2 rounded-pill px-3 py-2">
+      <i class="bi bi-arrow-left"></i> <span>Back to Portfolio</span>
+    </a>
+    <span class="text-muted small fw-semibold">Aashish Ranjan · Academic Portfolio</span>
+  </header>
+
+  <main class="py-4">
+    <div class="container">
+
+      <!-- Header Section -->
+      <div class="text-center mb-5" data-aos="fade-down">
+        <div class="header-ornament mb-3">
+          <span class="ornament-line"></span>
+          <i class="bi bi-compass ornament-icon"></i>
+          <span class="ornament-line"></span>
+        </div>
+
+        <h1 class="projects-title">Projects</h1>
+        <p class="projects-subcategories">RESEARCH &nbsp;|&nbsp; ACADEMIC &nbsp;|&nbsp; PERSONAL &nbsp;|&nbsp; TEACHING</p>
+        <p class="projects-desc">
+          A collection of projects that reflect my curiosity, learning journey,<br class="d-none d-md-block"> and hands-on exploration in Physics, Education and beyond.
+        </p>
+      </div>
+
+      <!-- Carousel Slider Wrapper -->
+      <div class="carousel-container position-relative px-md-5" data-aos="fade-up" data-aos-delay="150">
+
+        <!-- Swiper Main -->
+        <div class="swiper projectsSwiper">
+          <div class="swiper-wrapper py-3">
+
+            <!-- Slide 1: Optical Spectrometer -->
+            <div class="swiper-slide">
+              <div class="project-card">
+                <div class="project-img-wrapper">
+                  <span class="card-badge badge-research">Research Project</span>
+                  <img src="assets/img/projects/spectrometer/spectrometer.png" alt="Tunable Optical Spectrometer">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-project-title">Development of Custom Made Tunable Optical Spectrometer</h3>
+                  <p class="card-project-desc">Design and development of a low-cost tunable optical spectrometer using diffraction grating, slits, and a camera for spectral analysis.</p>
+                  <div class="card-meta-footer">
+                    <div class="meta-tags">
+                      <span><i class="bi bi-calendar3 me-1"></i>2025</span>
+                      <span><i class="bi bi-people me-1"></i>Team Project</span>
+                    </div>
+                    <a href="javascript:void(0);" class="btn-view-details" data-project="0">View Details &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Pokémon Study Timer Game -->
+            <div class="swiper-slide">
+              <div class="project-card">
+                <div class="project-img-wrapper">
+                  <span class="card-badge badge-edu">Game Design</span>
+                  <img src="assets/img/projects/pokemon-timer/herobg.png" alt="Pokémon Study Timer Game">
+                </div>
+                <div class="card-content">
+                  <h3 class="card-project-title">Pokémon Study Timer Game</h3>
+                  <p class="card-project-desc">A Pokémon-themed study timer game with calm background music and relaxing break games, designed to help students study in focused sessions.</p>
+                  <div class="card-meta-footer">
+                    <div class="meta-tags">
+                      <span><i class="bi bi-calendar3 me-1"></i>2025</span>
+                      <span><i class="bi bi-tag me-1"></i>Computational Thinking</span>
+                    </div>
+                    <a href="javascript:void(0);" class="btn-view-details" data-project="1">View Details &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Pagination Dots -->
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+
+        <!-- Custom Navigation Buttons -->
+        <button class="custom-nav-btn btn-prev" aria-label="Previous slide">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="custom-nav-btn btn-next" aria-label="Next slide">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Project Detail View (opens when "View Details" is clicked) -->
+  <div class="pd-overlay" id="pdOverlay" aria-modal="true" role="dialog">
+    <div class="pd-wrap" id="pdWrap"></div>
+  </div>
+  <div class="pd-zoom" id="pdZoom"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Swiper Carousel Initialization
+    // (992px: 2 cards because there are 2 projects; change to 3 when you add more)
+    const swiper = new Swiper('.projectsSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: false,
+      navigation: {
+        nextEl: '.btn-next',
+        prevEl: '.btn-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 28,
+        }
+      }
+    });
+  </script>
+
+  <!-- Project Detail Data + Logic -->
+  <script>
+    /* Edit the details of each project here.
+       Leave an image path as '' to show an "Image coming soon" box.
+       Leave a download url as '' to show a greyed-out button. */
+    const PROJECTS = [
+      {
+        badge: 'Research Project',
+        title: 'Development of Custom Made Tunable Optical Spectrometer',
+        desc: 'Design and development of a low-cost tunable optical spectrometer using diffraction grating, slits, and a camera for spectral analysis.',
+        year: '2025', type: 'Team Project', tag: 'Optics | Spectroscopy',
+        domain: 'Optics &amp; Spectroscopy',
+        tools: 'Diffraction Grating, Slits, Camera, Origin (Graph Plot)',
+        team: 'Aashish Ranjan, Anushka Rathore',
+        supervisor: 'Dr. Sagar Kumar Verma',
+        hero: 'assets/img/projects/spectrometer/spectrometer.png',
+        intro: 'A custom made tunable optical spectrometer was developed using a diffraction grating, slits and a camera to capture and analyze spectra. The aim was to build a low-cost, easy-to-assemble system for educational and research purposes.',
+        setupImg: 'assets/img/projects/spectrometer/setup.jpeg',
+        setupCap: 'Experimental setup: Light Source, Slit, Diffraction Grating, Lens, Camera',
+        principle: 'The spectrometer works on the principle of diffraction and interference. A narrow slit produces a well-defined beam which is diffracted by a grating. The diffracted light is focused onto a camera to record the spectrum. The wavelength is determined using the grating equation:',
+        formula: '<i>d</i> sin <i>θ</i> = <i>mλ</i>',
+        method: [
+          'Use a CD/DVD reflection element as the diffraction grating',
+          'Fix an adjustable slit assembly to get a narrow beam',
+          'Record the diffracted spectrum with a camera',
+          'Calibrate and analyse using Holmarc Image Analyser Pro',
+          'Compare intensity vs wavelength with and without the slit'
+        ],
+        results: [
+          { src: 'assets/img/projects/spectrometer/result-1.png', cap: 'Intensity vs Wavelength' },
+          { src: 'assets/img/projects/spectrometer/result-2.png', cap: 'Gray value vs distance (pixels), ImageJ' }
+        ],
+        observations: '',
+        gallery: [
+          'assets/img/projects/spectrometer/gallery-1.png',
+          'assets/img/projects/spectrometer/gallery-2.jpeg',
+          'assets/img/projects/spectrometer/gallery-3.png',
+          'assets/img/projects/spectrometer/gallery-4.jpeg'
+        ],
+        learnings: [
+          'A CD can work as a reflection diffraction grating: its closely spaced tracks split white light into a spectrum, and the grating equation d sin θ = nλ connects the diffraction angle to the wavelength.',
+          'Alignment matters the most. Even a small change in the CD angle, slit width or camera position visibly changed the position and clarity of the spectrum.',
+          'The slit controls a trade-off: a wider slit gave a brighter but blurred spectrum, while a narrower slit gave a sharper but fainter one.',
+          'Plotting intensity with and without the slit showed in practice how a slit improves spectral resolution.',
+          'A mobile camera with image-analysis software can turn a qualitative demonstration into basic quantitative analysis of intensity versus position.',
+          'Most difficulties were experimental, not theoretical: low intensity, dark-room conditions and measuring the diffraction angle accurately. This taught me how much precision and calibration matter in optical measurements.',
+          'As a future physics teacher, I also saw how a low-cost setup can make diffraction and interference observable for students.'
+        ],
+        references: [
+          'H.C. Verma, <i>Concepts of Physics (Part 2)</i>, Bharati Bhawan.',
+          'Ajoy Ghatak, <i>Optics</i>, McGraw Hill Education (studied for the theory).',
+          'NCERT, <i>Physics Class XII (Part II)</i>, NCERT Publications.',
+          'Eugene Hecht, <i>Optics</i>, Pearson Education.',
+          'Jenkins &amp; White, <i>Fundamentals of Optics</i>, McGraw Hill.'
+        ],
+        resources: [
+          'CD, DVD and VD diffraction gratings were obtained from Dr. Sagar Kumar Verma.',
+          'The experiments were carried out in the Optics Lab.'
+        ],
+        highlights: [
+          'Low-cost and easy to assemble',
+          'Captures clear spectral data',
+          'Useful for educational demonstrations',
+          'Scope for further improvement'
+        ],
+        downloads: [
+          { label: 'Project Report (PDF)', url: 'assets/img/projects/spectrometer/Report(optics).pdf' }
+        ]
+      },
+      {
+        badge: 'Game Design',
+        title: 'Pokémon Study Timer Game',
+        desc: 'A Pokémon-themed study timer game with calm background music and relaxing break games, designed to help students study in focused sessions.',
+        year: '2025', type: 'Team Project', tag: 'Computational Thinking',
+        domain: 'Game Design &amp; Computational Thinking',
+        tools: 'Scratch programming, Game Design Principles, Music Editing tools',
+        team: 'Aashish Ranjan, L. Banny, Chandan Kumar',
+        supLabel: 'Instructor',
+        supervisor: 'Dr. Romi Banerjee',
+        hero: 'assets/img/projects/pokemon-timer/herobg.png',
+        /* Text-only sections (no images except the hero image above) */
+        sections: [
+          {
+            tab: 'Overview', title: 'Introduction',
+            body: '<p>A Pokémon-themed study timer game, designed and programmed by our team as a project for the Computational Thinking course. It helps students study in focused sessions: a student sets a timer (for example 25 minutes) and studies while calm background music plays.</p><p>Many students find it easier to study with music, and this game is made for them. When the session ends, the student can take a break and relax with a Pokémon game before getting back to studying.</p>'
+          },
+          {
+            tab: 'Features', title: 'Features',
+            body: '<ul><li><b>Study timer:</b> set any study duration, such as 25 minutes, and the timer keeps the session on track.</li><li><b>Background music:</b> calm music plays while studying to keep the mind relaxed and focused.</li><li><b>Breaks:</b> breaks can be added between study sessions.</li><li><b>Relaxing Pokémon games:</b> mind-relaxing Pokémon games are available during breaks.</li></ul>'
+          },
+          {
+            tab: 'How It Works', title: 'How It Works',
+            body: '<ol><li>The student chooses how long to study (for example, 25 minutes).</li><li>The timer starts and calm background music plays during the session.</li><li>When the time is up, the student takes a break.</li><li>During the break, the student plays one of the relaxing Pokémon games.</li><li>After the break, the student returns to the next study session.</li></ol>'
+          },
+          {
+            tab: 'Goal', title: 'Goal and Approach',
+            body: '<p>The goal of the project was to develop a problem-solving mindset. We started with a real problem, how to help students stay focused while studying, broke it into smaller parts (timer, music, breaks and break games), and then programmed each part step by step.</p>'
+          },
+          {
+            tab: 'Team', title: 'Team and Guidance',
+            body: '<ul><li><b>Contributors:</b> Aashish Ranjan, L. Banny and Chandan Kumar</li><li><b>Instructor:</b> Dr. Romi Banerjee</li><li><b>Course:</b> Computational Thinking</li></ul>'
+          },
+          {
+            tab: 'Learnings', title: 'Learnings',
+            body: '<ul><li>Breaking a big problem into smaller parts makes it much easier to design and program.</li><li>A good solution starts from a real need of the user: here, students who like to study with music.</li><li>Study time and break time both matter, so the game supports focus as well as relaxation.</li><li>Working in a team taught us to share tasks and combine our parts into one working game.</li></ul>'
+          }
+        ],
+        highlights: [
+          'Study timer for focused sessions',
+          'Calm background music while studying',
+          'Breaks with relaxing Pokémon games',
+          'Designed and programmed by our team'
+        ],
+        downloads: []
+      }
+    ];
+
+    (function () {
+      const ov = document.getElementById('pdOverlay');
+      const wrap = document.getElementById('pdWrap');
+      const zoom = document.getElementById('pdZoom');
+      const todo = '<span class="pd-todo">To be added</span>';
+      const li = x => '<li>' + x + '</li>';
+      const slot = (src, label, cls) => src
+        ? '<div class="pd-slot ' + (cls || '') + '"><img src="' + src + '" alt="' + label + '"></div>'
+        : '<div class="pd-slot pd-empty ' + (cls || '') + '"><span>Image coming soon<small>' + label + '</small></span></div>';
+      const fig = (src, cap) => src
+        ? '<figure class="pd-fig"><img src="' + src + '" alt="' + cap + '"><figcaption>' + cap + '</figcaption></figure>'
+        : slot('', cap, '');
+      const tabs = [['Overview', 'pd-s1'], ['Methodology', 'pd-s4'], ['Results', 'pd-s5'], ['Gallery', 'pd-s6'], ['Learnings', 'pd-s7'], ['References', 'pd-s8']];
+      let curTabs = tabs;
+
+      function render(p) {
+        // Projects with "sections" are text-only; others use the full layout (setup, results, gallery...)
+        curTabs = p.sections ? p.sections.map((s, i) => [s.tab || s.title, 'pd-t' + i]) : tabs;
+        const tabsHtml = curTabs.map((t, k) => '<button data-s="' + t[1] + '"' + (k ? '' : ' class="pd-act"') + '>' + t[0] + '</button>').join('');
+        const dl = p.downloads.map(d => d.url
+          ? '<a class="pd-dl" href="' + d.url + '" target="_blank" rel="noopener">' + d.label + ' <span>⬇</span></a>'
+          : '<div class="pd-dl pd-off" title="Coming soon">' + d.label + ' <span>⬇</span></div>').join('');
+        let main;
+        if (p.sections) {
+          main = p.sections.map((s, i) => '<div class="pd-sec" id="pd-t' + i + '"><h4>' + (i + 1) + '. ' + s.title + '</h4>' + s.body + '</div>').join('');
+        } else {
+          const res = p.results.map(r => fig(r.src, r.cap)).join('');
+          const gal = p.gallery.map((g, n) => slot(g, 'Photo ' + (n + 1), '')).join('');
+          const learn = p.learnings.length ? '<ul>' + p.learnings.map(li).join('') + '</ul>' : '<p>' + todo + '</p>';
+          const refs = p.references.length
+            ? '<ol>' + p.references.map(li).join('') + '</ol>' +
+              (p.resources.length ? '<p style="margin-top:14px"><b style="color:#1f2937">Resources used</b></p><ul>' + p.resources.map(li).join('') + '</ul>' : '')
+            : '<p>' + todo + '</p>';
+          main = '<div class="pd-sec" id="pd-s1"><h4>1. Introduction</h4><p>' + p.intro + '</p></div>' +
+            '<div class="pd-sec" id="pd-s2"><h4>2. Experimental Setup</h4>' + fig(p.setupImg, p.setupCap) + '</div>' +
+            '<div class="pd-sec" id="pd-s3"><h4>3. Working Principle</h4><p>' + p.principle + '</p>' + (p.formula ? '<div class="pd-fm">' + p.formula + '</div>' : '') + '</div>' +
+            '<div class="pd-sec" id="pd-s4"><h4>4. Methodology</h4><ol>' + p.method.map(li).join('') + '</ol></div>' +
+            '<div class="pd-sec" id="pd-s5"><h4>5. Results</h4><div class="pd-two">' + res + '</div><p style="margin-top:10px">' + (p.observations || todo) + '</p></div>' +
+            '<div class="pd-sec" id="pd-s6"><h4>6. Gallery</h4><div class="pd-gal">' + gal + '</div></div>' +
+            '<div class="pd-sec" id="pd-s7"><h4>7. Learnings</h4>' + learn + '</div>' +
+            '<div class="pd-sec" id="pd-s8"><h4>8. References</h4>' + refs + '</div>';
+        }
+        return '<button class="pd-back" id="pdBack">← Back to Projects</button>' +
+          '<div class="pd-hero"><div><span class="pd-chip">' + p.badge + '</span><h2>' + p.title + '</h2><p>' + p.desc + '</p>' +
+          '<div class="pd-meta"><span>📅 ' + p.year + '</span><span>👥 ' + p.type + '</span><span>🏷 ' + p.tag + '</span></div></div>' +
+          slot(p.hero, 'Hero image', 'pd-h') + '</div>' +
+          '<div class="pd-tabs" id="pdTabs">' + tabsHtml + '</div>' +
+          '<div class="pd-cols"><div>' + main + '</div><aside>' +
+          '<div class="pd-box"><h5>Project Details</h5>' +
+          '<div class="pd-row"><b>Year</b>' + p.year + '</div><div class="pd-row"><b>Type</b>' + p.badge + '</div>' +
+          '<div class="pd-row"><b>Domain</b>' + p.domain + '</div><div class="pd-row"><b>Tools Used</b>' + (p.tools || todo) + '</div>' +
+          '<div class="pd-row"><b>Team</b>' + p.team + '</div><div class="pd-row"><b>' + (p.supLabel || 'Supervisor') + '</b>' + (p.supervisor || todo) + '</div></div>' +
+          '<div class="pd-box"><h5>Key Highlights</h5>' + p.highlights.map(h => '<div class="pd-hl">' + h + '</div>').join('') + '</div>' +
+          (p.downloads.length ? '<div class="pd-box"><h5>Downloads</h5>' + dl + '</div>' : '') +
+          '</aside></div>';
+      }
+
+      function openDetail(i) {
+        wrap.innerHTML = render(PROJECTS[i]);
+        ov.classList.add('pd-on');
+        ov.scrollTop = 0;
+        document.body.style.overflow = 'hidden';
+      }
+      function closeDetail() {
+        ov.classList.remove('pd-on');
+        document.body.style.overflow = '';
+      }
+      function openZoom(src) {
+        zoom.innerHTML = '<img src="' + src + '" alt="">';
+        zoom.classList.add('pd-on');
+      }
+
+      document.addEventListener('click', function (e) {
+        const b = e.target.closest('[data-project]');
+        if (b) { e.preventDefault(); openDetail(+b.dataset.project); }
+      });
+      wrap.addEventListener('click', function (e) {
+        if (e.target.closest('#pdBack')) { closeDetail(); return; }
+        const t = e.target.closest('#pdTabs button');
+        if (t) {
+          const el = document.getElementById(t.dataset.s);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return;
+        }
+        const im = e.target.closest('.pd-slot img, .pd-fig img');
+        if (im) openZoom(im.src);
+      });
+      zoom.addEventListener('click', function () { zoom.classList.remove('pd-on'); });
+      ov.addEventListener('scroll', function () {
+        let act = curTabs[0][1];
+        curTabs.forEach(function (t) {
+          const el = document.getElementById(t[1]);
+          if (el && el.getBoundingClientRect().top < 120) act = t[1];
+        });
+        document.querySelectorAll('#pdTabs button').forEach(function (b) {
+          b.classList.toggle('pd-act', b.dataset.s === act);
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          if (zoom.classList.contains('pd-on')) zoom.classList.remove('pd-on');
+          else closeDetail();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

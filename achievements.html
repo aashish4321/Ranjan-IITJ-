@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Achievements - Aashish Ranjan</title>
+  <meta content="Certificates, workshops, and recognitions of Aashish Ranjan" name="description">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Swiper CSS (Smooth Carousel Slider ke liye) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Dedicated Achievements CSS File -->
+  <link href="assets/css/achievements.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="achieve-header py-3 px-4 d-flex justify-content-between align-items-center">
+    <a href="index.html" class="btn btn-sm btn-outline-dark back-nav-btn d-inline-flex align-items-center gap-2 rounded-pill px-3 py-2">
+      <i class="bi bi-arrow-left"></i> <span>Back to Portfolio</span>
+    </a>
+    <span class="text-muted small fw-semibold">Aashish Ranjan · Academic Portfolio</span>
+  </header>
+
+  <main class="achievements-section">
+    <div class="container py-4">
+
+      <!-- Header Section -->
+      <div class="text-center mb-5" data-aos="fade-down">
+        <!-- Top Ornament Icon -->
+        <div class="header-ornament mb-3">
+          <span class="ornament-line"></span>
+          <i class="bi bi-compass ornament-icon"></i>
+          <span class="ornament-line"></span>
+        </div>
+
+        <h1 class="achievements-title">Achievements</h1>
+        <p class="achievements-subcategories">CERTIFICATES &nbsp;|&nbsp; WORKSHOPS &nbsp;|&nbsp; COURSES &nbsp;|&nbsp; ACTIVITIES</p>
+        <p class="achievements-desc">
+          A collection of certifications, workshops, and recognitions that reflect<br class="d-none d-md-block"> my learning journey and interests.
+        </p>
+      </div>
+
+      <!-- Carousel Slider Wrapper -->
+      <div class="carousel-container position-relative px-md-5" data-aos="fade-up" data-aos-delay="150">
+
+        <!-- Swiper Main -->
+        <div class="swiper achievementsSwiper">
+          <div class="swiper-wrapper py-3">
+
+            <!-- Slide 1: Learn Python 3 -->
+            <div class="swiper-slide">
+              <div class="achievement-card">
+                <div class="cert-img-wrapper">
+                  <img src="assets/img/cert-Front end.jpg" alt="Learn Python 3 Certificate">
+                </div>
+                <div class="card-info">
+                  <h5 class="card-item-title">FRONT END DEVELOPMENT</h5>
+                  <p class="card-issuer">Codecademy</p>
+                  <span class="achieve-badge badge-blue">Online Course</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Optical Sensors (NPTEL) -->
+            <div class="swiper-slide">
+              <div class="achievement-card">
+                <div class="cert-img-wrapper">
+                  <img src="assets/img/cert-da vinci.jpg" alt="Optical Sensors Certificate">
+                </div>
+                <div class="card-info">
+                  <h5 class="card-item-title">DA VINCI RESOLVE</h5>
+                  <p class="card-issuer">udemy</p>
+                  <span class="achieve-badge badge-peach">Online Course</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Volunteer Certificate -->
+            <div class="swiper-slide">
+              <div class="achievement-card">
+                <div class="cert-img-wrapper">
+                  <img src="assets/img/cert-volunteer.jpeg" alt="Volunteer Certificate">
+                </div>
+                <div class="card-info">
+                  <h5 class="card-item-title">Volunteer Certificate</h5>
+                  <p class="card-issuer">FESTIVE MATHS</p>
+                  <span class="achieve-badge badge-green">Workshop</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: STEM Mela Workshop -->
+            <div class="swiper-slide">
+              <div class="achievement-card">
+                <div class="cert-img-wrapper">
+                  <img src="assets/img/cert-hindi sangosthi.jpeg" alt="STEM Mela Workshop Certificate">
+                </div>
+                <div class="card-info">
+                  <h5 class="card-item-title">Volunteer Certificate</h5>
+                  <p class="card-issuer">Hindi Sangosthi</p>
+                  <span class="achieve-badge badge-purple">Workshop</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Pagination Dots -->
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+
+        <!-- Custom Navigation Buttons -->
+        <button class="custom-nav-btn btn-prev" aria-label="Previous slide">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="custom-nav-btn btn-next" aria-label="Next slide">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+
+      </div>
+
+    </div>
+  </main>
+
+    <!-- Certificate Popup -->
+  <div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-label="Certificate preview">
+    <button class="cert-close" id="certClose" aria-label="Close">&times;</button>
+    <figure class="cert-modal-body">
+      <img id="certModalImg" src="" alt="">
+      <figcaption id="certModalCap"></figcaption>
+    </figure>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Swiper Carousel Initialization
+    const swiper = new Swiper('.achievementsSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: false,
+      navigation: {
+        nextEl: '.btn-next',
+        prevEl: '.btn-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 28,
+        }
+      }
+    });
+        // Certificate popup
+    const modal = document.getElementById('certModal');
+    const modalImg = document.getElementById('certModalImg');
+    const modalCap = document.getElementById('certModalCap');
+
+    function openCert(card) {
+      const img = card.querySelector('.cert-img-wrapper img');
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      modalCap.textContent =
+        card.querySelector('.card-item-title').textContent + ' · ' +
+        card.querySelector('.card-issuer').textContent;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCert() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.achievement-card').forEach(function (card) {
+      card.tabIndex = 0;
+      card.addEventListener('click', function () { openCert(card); });
+      card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') openCert(card);
+      });
+    });
+
+    modal.addEventListener('click', function (e) {
+      if (e.target !== modalImg) closeCert();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeCert();
+    });
+  </script>
+
+</body>
+</html>

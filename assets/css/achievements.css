@@ -1,0 +1,310 @@
+/* --------------------------------------------------
+   Achievements Page Styling (achievements.css)
+-------------------------------------------------- */
+
+body {
+  background-image: url('../img/achievements-bg.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #2b2b2b;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Study layer overlays to ensure text remains highly readable */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.45); /* Soft natural natural light overlay */
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Header Navbar Styling to ensure contrast against BG */
+.achieve-header {
+  position: relative;
+  z-index: 10;
+}
+
+/* Header Ornament */
+.header-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.ornament-line {
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background-color: #3e4451;
+}
+
+.ornament-icon {
+  font-size: 1.1rem;
+  color: #0d1e38;
+}
+
+/* Title & Subheadings */
+.achievements-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+  font-weight: 700;
+  color: #0d1e38;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.achievements-subcategories {
+  font-size: 0.8rem;
+  letter-spacing: 3.5px;
+  font-weight: 600;
+  color: #1e293b;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.achievements-desc {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #1e293b;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Carousel Section container to place above background */
+.carousel-container {
+  position: relative;
+  z-index: 5;
+}
+
+/* Card Container with glassmorphism touches for backdrop blend */
+.achievement-card {
+  background: rgba(255, 255, 255, 0.93);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(13, 30, 56, 0.09);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(13, 30, 56, 0.15);
+}
+
+/* Certificate Preview Box */
+.cert-img-wrapper {
+  background-color: #fbfbfd;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+}
+
+.cert-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover .cert-img-wrapper img {
+  transform: scale(1.03);
+}
+
+/* Card Bottom Info */
+.card-info {
+  padding-top: 14px;
+}
+
+.card-item-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.card-issuer {
+  font-size: 0.88rem;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+/* Badges */
+.achieve-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+.badge-blue {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.badge-peach {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge-green {
+  background-color: #ecfdf5;
+  color: #047857;
+}
+
+.badge-purple {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+
+/* Back navigation button hover */
+.back-nav-btn {
+  transition: all 0.2s ease;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.85);
+  border-color: #3e4451;
+  color: #0d1e38;
+}
+
+.back-nav-btn:hover {
+  background: #0d1e38;
+  color: #ffffff;
+  border-color: #0d1e38;
+}
+
+/* Navigation Arrow Buttons */
+.custom-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  color: #0f172a;
+  font-size: 1.1rem;
+}
+
+.custom-nav-btn:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+.btn-prev {
+  left: 0;
+}
+
+.btn-next {
+  right: 0;
+}
+
+/* Swiper Pagination Dots */
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #475569;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0f172a;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+
+@media (max-width: 768px) {
+  .custom-nav-btn {
+    display: none;
+  }
+}
+
+/* Certificate popup */
+.achievement-card { cursor: zoom-in; }
+
+.cert-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 14, 26, 0.88);
+  padding: 16px;
+}
+
+.cert-modal.open { display: flex; }
+
+.cert-modal-body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.cert-modal-body img {
+  max-width: 92vw;
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.cert-modal-body figcaption {
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.cert-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #0d1e38;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
